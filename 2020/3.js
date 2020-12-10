@@ -1,5 +1,4 @@
 let input = getInput()
-const tree = '#'
 
 const r1 = countTreesForSlope(1, 1)
 const r2 = countTreesForSlope(3, 1)
@@ -7,7 +6,8 @@ const r3 = countTreesForSlope(5, 1)
 const r4 = countTreesForSlope(7, 1)
 const r5 = countTreesForSlope(1, 2)
 
-console.log(r1 * r2 * r3 * r4 * r5)
+console.log(`Part 1 result: ${r2}`)
+console.log(`Part 2 result: ${r1 * r2 * r3 * r4 * r5}`)
 
 function countTreesForSlope(slopeX, slopeY) {
   let x = slopeX
@@ -17,7 +17,7 @@ function countTreesForSlope(slopeX, slopeY) {
   while(y < input.length) {
     if (x >= input[y].length) x -= input[y].length
 
-    if (input[y][x] === tree) {
+    if (input[y][x] === '#') {
       result++
     }
 

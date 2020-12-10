@@ -1,44 +1,23 @@
-const input = getInput();
+const input = getInput()
+let part1Result = 0
+let part2Result = 0
 
-let part1Result = 0;
-for (let i = 0; i < input.length; i++) {
-  const a = input[i];
-
-  for (let j = 0; j < input.length; j++) {
-    const b = input[j];
-
+input.forEach(a => {
+  input.forEach(b => {
     if (a + b == 2020) {
-      part1Result = a * b;
-      break;
+      part1Result = a * b
     }
-  }
 
-  if (part1Result) break;
-}
-console.log(`Part 1 result: ${part1Result}`);
-
-let part2Result = 0;
-for (let i = 0; i < input.length; i++) {
-  const a = input[i];
-
-  for (let j = 0; j < input.length; j++) {
-    const b = input[j];
-
-    for (let k = 0; k < input.length; k++) {
-      const c = input[k];
-
+    input.forEach(c => {
       if (a + b + c == 2020) {
-        part2Result = a * b * c;
-        break;
+        part2Result = a * b * c
       }
-    }
+    })
+  })
+})
 
-    if (part2Result) break;
-  }
-
-  if (part2Result) break;
-}
-console.log(`Part 2 result: ${part2Result}`);
+console.log(`Part 1 result: ${part1Result}`)
+console.log(`Part 2 result: ${part2Result}`)
 
 function getInput() {
   return [
@@ -242,5 +221,5 @@ function getInput() {
     656,
     1530,
     1743,
-  ];
+  ]
 }
