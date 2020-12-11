@@ -1108,5 +1108,5 @@ function getInput() {
   iyr:2023
 
   byr:2001 hcl:#4784a2 hgt:161cm iyr:2014 eyr:2025 pid:955262336
-  ecl:amb`.split(/\n\n/g).map(i => i.trim().replace(/\n/g, '').replace(/\s\s/g, ' '))
+  ecl:amb`.split(/\n\n/g).map(i => i.trim().replace(/\n\s/g, ''))
 }
