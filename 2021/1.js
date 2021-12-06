@@ -2022,7 +2022,8 @@ function getInput() {
     8127
     8145
     8147
-  `.split(/[\n\r]+/g)
-   .filter(i => i.trim())
-   .map(i => parseInt(i))
+  `
+  .split(/[\n\r]+/g)
+  .filter(i => i.trim())
+  .map(i => parseInt(i))
 }

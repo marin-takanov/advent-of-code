@@ -10,5 +10,9 @@ console.log(`Part 1 result: ${part1Result}`)
 console.log(`Part 2 result: ${part2Result}`)
 
 function getInput() {
-  return ``
+  return `
+  `
+  .split(/[\n\r]+/g)
+  .filter(i => i.trim())
+  // .map(i => parseInt(i))
 }

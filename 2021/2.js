@@ -1035,7 +1035,8 @@ function getInput() {
     forward 6
     down 1
     forward 5
-  `.split(/[\n\r]+/g)
-   .filter(i => i.trim())
-   .map(i => i.trim())
+  `
+  .split(/[\n\r]+/g)
+  .filter(i => i.trim())
+  .map(i => i.trim())
 }
